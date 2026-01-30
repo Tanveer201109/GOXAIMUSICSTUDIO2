@@ -2,8 +2,6 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { CHAT_MODEL, IMAGE_MODEL } from '../constants';
 import { ImageSize } from '../types';
 
-let genAIInstance: GoogleGenAI | null = null;
-
 const getClient = (): GoogleGenAI => {
   // Always create a new instance to ensure we pick up the latest env var if it changed
   // e.g. after a user selects a key.

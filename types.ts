@@ -25,10 +25,9 @@ export interface GeneratedImage {
 
 // Window interface extension for AI Studio key selection
 declare global {
-  interface Window {
-    aistudio: {
-      hasSelectedApiKey: () => Promise<boolean>;
-      openSelectKey: () => Promise<void>;
-    };
+  // Augment the existing AIStudio interface which is expected by the environment
+  interface AIStudio {
+    hasSelectedApiKey: () => Promise<boolean>;
+    openSelectKey: () => Promise<void>;
   }
 }
